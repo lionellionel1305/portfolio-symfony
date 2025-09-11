@@ -1,0 +1,541 @@
+{% extends 'base.html.twig' %}
+{% block title %}Règlement Intérieur - Les Archers du Castel{% endblock %}
+{% block body %}
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem;
+      background:rgb(249, 249, 249);
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #0000ff;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #1a73e8;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: .5rem;
+    }
+    p, li {
+      font-size: 1rem;
+      margin-bottom: .75rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .article {
+      margin-bottom: 2rem;
+      background:rgb(211, 228, 245);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Règlement Intérieur - Les Archers du Castel</h1>
+
+  <div class="article">
+    <h2>Article 1 – Généralités</h2>
+    <p>Ce règlement intérieur a pour but de cadrer le fonctionnement du club pour l'ensemble des archères et des archers. 
+    Le club est affilié à la Fédération Française de Tir à l'Arc (0329032) et à ses différentes instances régionales et départementales. 
+    Si une ou plusieurs dispositions ne figurent pas dans le présent règlement, seule la réglementation fédérale s'applique par défaut.</p>
+    <p>Ce règlement, évolutif, est soumis au vote des adhérents à chaque assemblée.</p>
+    <p>Ce présent règlement sera diffusé lors de l'Assemblée Générale:</p>
+    <ul>
+      <li>Par voie électronique (courriel) à chaque archer en début de saison dès que son inscription est validée</li>
+      <li>Par affichage dans le local des archers à la salle multifonctions</li>
+      <li>Par tout membre du Bureau sur demande</li>
+    </ul>
+    <ul>Lexique :
+        <li> FFTA : Fédération Française de Tir à l'Arc</li>
+        <li> CRBTA : Comité Régional de Bretagne de Tir à l'Arc</li>
+        <li> CD29 : Comité Départemental du Finistère</li>
+    </ul>
+    <p>Le terme "archer" désigne tout(e) adhérent(e) du club pratiquant le tir à l'arc
+    Le terme "dirigeant" désigne tout membre du Conseil d'administration (Bureau) et plus particulièrement son ou sa
+    Président(e) Le terme "entraineur" désigne un membre du club ayant obtenu un diplôme de formateur agréé délivré
+    par la FFTA.
+    Le terme "arbitre" désigne un membre du club ayant obtenu un diplôme pour l'arbitrage des compétitions délivré par
+    la FFTA
+    Le terme "aide entraineur" désigne un membre du club justifiant au minimum deux (2) années de pratique assidue
+    (licence compétition). Il est diplômé après formation fédérale.
+    L’aide entraineur peut encadrer les archers compétiteurs sur les concours inscrits au calendrier de la F.F.T.A.
+    Sa fonction consiste à ouvrir les installations du club, à faire respecter les règles de sécurité lors des tirs, et, si
+    besoin, à aider au réglage des matériels. Il met en pratique les consignes données par l’entraineur lors d’une
+    séance d'entrainement. Il est sous l'autorité exclusive de l’entraineur.</p>
+  </div>
+
+  <div class="article">
+    <h2>Article 2 – Adhésion et renouvellement des licences</h2>
+    <p>Les primo adhésions et les renouvellements sont effectués à compter du 1er septembre de chaque année.</p>
+    <p>Pour valider son adhésion, chaque membre doit :</p>
+    <ul>
+      <li>Remplir la fiche d’inscription</li>
+      <li>Avoir validé le présent règlement intérieur</li>
+    </ul>
+    <p><strong>Tous les nouveaux archers (jeunes ou adultes) sont automatiquement inscrits avec une licence compétition.</strong></p>
+    <p>Réduction : -10 € à partir du 3ᵉ inscrit de la même famille (même adresse).</p>
+    <p>Les licences sont payables en trois fois maximum. (Les chèques seront émis à l'inscription, une date
+        d'encaissement sera portée au dos du chèque).<br>
+        Le paiement intégral de l’adhésion pour chaque nouvelle saison doit avoir été effectué au plus tard le 31
+        décembre de l’année civile courante. Sur décision du bureau du Conseil d’Administration, les adhérents dont le
+        dossier de renouvellement, ou d’inscription, ou le paiement intégral de l’adhésion, ne serait pas complet au 31
+        décembre pourront se voir refuser l’inscription aux concours et/ou l’accès aux entraînements.<br>
+        Dans le cas où le montant des aides financières versées au club au nom d’un adhérent – quel que soit leur support –
+        serait supérieur au paiement effectué par l’adhérent, le trop-perçu sera reversé par le club à l’adhérent.
+        Le Conseil d’Administration se réserve le droit de ne pas renouveler une adhésion au club en cas de difficultés de
+        relation avec le titulaire, qui en sera informé par écrit (courriel ou courrier) dans les meilleurs délais.</p>
+  </div>
+
+ 
+  <div class="article">
+    <h2>Article 3 – Installations</h2>
+    <p>Les installations sont situées :</p>
+    <ul>
+      <li><strong>Tir en salle :</strong> Salle multifonctions, Stade du Leurré, 29710 Plogastel-Saint-Germain</li>
+      <li><strong>Tir en extérieur :</strong> ZA de Kérandoaré, 29710 Plogastel-Saint-Germain</li>
+    </ul>
+    <p>Respect du règlement de la salle et courtoisie avec les randonneurs sont obligatoires.</p>
+    <p><strong>En extérieur, chaque archer est responsable de ses déchets… merci de les reprendre avec vous et de les trier chez vous
+        pour des raisons évidentes de sécurité, il est interdit d'être seul sur le pas de Er (salle ou extérieur)</strong></p>
+    <p>Les locaux et le terrain sont mis gratuitement à la disposition de l’association par la Mairie de Plogastel-Saint-Germain
+        et la Communauté des Communes du Haut Pays Bigouden de Pouldreuzic.</p>    
+  </div>
+
+<div class="article">
+    <h2>Article 4 ACCES AUX INSTALLATIONS</h2>
+    <p>L’accès aux installations est interdit à toute personne non licenciée, ainsi qu’aux licenciés mineurs sans la présence de
+    l’entraineur ou d’un aide entraineur.</p>
+    <p>Cependant des dérogations à ce principe sont admises dans les conditions suivantes :</p>
+    <ul>
+      <li>Les parents des archers (ou de la famille) sont autorisés à attendre leurs enfants à l’entrée de la salle.</li>
+      <li>Un accès occasionnel peut être autorisé aux licenciés FFTA de passage dans la commune. Cette
+        dérogation devra obtenir l’aval du Président ou de son représentant et être officialisée par une
+        autorisation écrite. La présence d’un membre du Conseil d’Administration du club sera nécessaire.
+        Un droit de paille sera demandé.</li>
+      <li>L’accès aux non licenciés ne peut s’effectuer que lors des séances d’animations, journées portes ouvertes.</li>
+      <li>Les licenciés ayant quitté le club sont considérés comme des visiteurs occasionnels.</li>  
+    </ul>
+  </div>
+
+  <div class="article">
+    <h2>Article 5 UTILISATIONS DES INSTALLATIONS</h2>
+    <p>La salle mise à la disposition de l’association ne doit être utilisée que pour la pratique du tir à l’arc ou les stages pendant
+        les créneaux horaires réservés.
+        Le respect des consignes de sécurité est, et doit rester, une préoccupation constante des archers présents sur le pas de
+        tir.</p>
+    <p>Quelques règles sont propres au monde des archers et méritent de le rester :</p>
+    <ul>
+      <li>Le salut est un signe de respect de la tradition de l’arme (Chaque archer, jeune ou adulte, doit dire
+            bonjour à tous les membres dès son arrivée).</li>
+      <li>Le tir coordonné de tous les archers est une règle de bon sens..</li>
+      <li>Au-delà des règles de sécurité et de tradition, les règles élémentaires de vie en société s’imposent d’évidence..</li>
+      <li>L’interdiction de fumer dans la salle est une obligation légale que le club doit sanctionner.</li>  
+      <li>La consommation d’alcool sur le pas de tir est interdite.
+            Pour des événements festifs particuliers et en adéquation avec la loi, des dérogations pourront être accordés
+            par le Président sans excéder les dispositions d'une licence III à savoir :
+            Groupe 3 : boissons fermentées non dis2llées (vin, bière, cidre, poiré, hydromel) et vins doux naturels,
+            crème de cassis, jus de fruits ou de légumes comportant jusqu'à 3° d'alcool, vin de liqueurs, apéri2f à base
+            de vin, porto, liqueurs de fruits (fraises, framboises, cassis,
+            …) avec un taux inférieur ou égal à 18° d'alcool.
+            Le stockage des boissons alcoolisées sera effectué dans une armoire disposant d'un système de verrouillage.</li>
+      <li>Chaque manquement à la politesse ou à la courtoisie doit être repris et signalé au premier membre
+            du bureau rencontré. Les comportements manifestement abusifs seront sanctionnés comme il est dit
+            à l’ARTICLE 18 - SANCTIONS.</li>
+    </ul>
+  </div>
+    <div class="article">
+    <h2>Article 6 –ENTRETIEN DES INSTALLATIONS</h2>
+    <p><strong>Tous les archers doivent parEciper à l’installaEon, au nePoyage et au rangement de la salle.
+        Après chaque entraînement, les résidus de paille sous les buPes de Er devront être balayés. Les poubelles du
+        local devront être vidées.</strong></p>
+    <p>Tous les archers du club doivent respecter la propreté des lieux avant de quioer la
+            salle ainsi que vérifier que toutes les cibles et le matériel sont correctement rangées.
+            Si un archer constate que la salle n'est pas propre et rangée ou dégradée à son arrivée ou en partant, il doit
+            immédiatement avertir un membre dirigeant du club. Selon la dégradation constatée, il en référera par mail à la
+            Mairie.</p> 
+    <p>Le dernier dirigeant veillera, en quittant la salle, que toutes les portes et issues de secours soient bien fermées
+        et que les lumières soient éteintes.</p>
+  </div>
+
+
+  <div class="article">
+    <h2>Article 7 SEANCES D’ENTRAINEMENT</h2>
+    <ul>
+        <li>La saison "Salle" démarre début septembre pour finir fin février sur décision du Conseil d’Administration.
+            Toutefois, au-delà de cette date, il sera possible de continuer à tirer en salle pour les archers inscrits en
+            licences loisirs. La salle pourra être ouverte par le référent, selon un planning défini. Le référent sera
+            nommé par le Conseil d’Administration.</li>
+        <li>La saison "Extérieure" démarre début mars pour finir fin juillet.
+            Tous les cours seront dispensés en extérieur (possibilité de repli en salle selon météo, les archers en
+            seront informés via WhatsApp et/ou SMS.)</li>
+        <li>Tous les nouveaux archers (jeunes et adultes) devront suivre le dispositif de formation ci-dessous :
+                • Initiation et progression en salle de septembre à fin février
+                • Initiation et progression en extérieur de début mars à fin juillet
+        <li>Lors du renouvellement de sa licence (2ème année), l'archer souscrira une licence compétition afin de
+            confirmer sa progression. Il pourra être imposé à un archer de reprendre son initiation ou sa progression si
+        le Conseil d’Administration et/ou l'entraineur ne le juge pas apte à tirer en autonomie.</li>  
+    </ul>
+    <p>Seuls les licenciés en loisirs pourront avoir la liberté de tirer en salle ou en extérieur selon la convenance des archers.
+        Ils devront respecter les dispositions générales d'encadrement des archers compétiteurs.</p>
+        <h3>Les horaires des entraînements seront affichés à la salle à chaque début de saison :</h3>
+    <ul>
+        <li>Mardi :</li>
+            <p>18h15 à 19h15 : Réservé aux jeunes (8-18 ans).</p>
+            <p>19h30 à 21h30 : Réservé aux adultes (compétition).</p>
+        <li>Jeudi :</li>
+            <p>19h30 à 21h30 : Ouvert à tous (compé==on et loisir) – Priorité compétition (toute la saison se passera
+            en salle)</p>
+        <li>Samedi : </li>    
+            <p>09h00 à 11h00 : Ouvert à tous (école de tir)</p>
+        <li>Dimanche : </li>
+        <p>10h00 à 12h00 : Ouvert à tous (compétition et loisir) – Priorité loisir</p>
+    </ul>
+    <p>Pour qu’un entrainement ait lieu (hors licence loisir) l’entraineur ou un aide-entraineur devra être présent quel que
+        soit le calendrier des compétitions, les licenciés loisir devrons se référer au réfèrent. Les horaires pourront évoluer en
+        fonction du nombre de licenciés.</p>
+    <p>En début de séance, les responsables des archers mineurs doivent les accompagner jusque dans la salle ou sur
+        le site extérieur afin de s’assurer de la présence d’un entraineur ou aide-entraineur et non les déposer sur le
+        parking.</p>    
+    <p>L’heure de début s’entend : matériel monté, archer équipé, prêt à s’échauffer.</p>
+    <p>L’heure de fin s’entend : arrêt des exercices, archer prêt à effectuer ses étirements, puis à démonter et ranger son
+        matériel ainsi que de participer au nettoyage de la salle.</p>
+    <p><strong>En fin de séance, les responsables des archers mineurs doivent venir les chercher dans la salle ou sur le site
+        extérieur afin que l’entraineur ou aide-entraineur puisse, si nécessaire, s’entretenir avec eux et non les attendre
+        sur le parking.</strong></p>    
+    <p>Les dispositions complémentaires décrites à l’article 16 du présent règlement devront être appliquées quels que
+        soient les horaires de début et de fin des entraînements et des cours.</p>    
+  </div>
+   
+    <div class="article">
+    <h2>Article 8 – ENCADREMENT</h2>
+    <p>Les entraînements et les cours peuvent être encadrés par :</p>
+    <ul>
+      <li>Les titulaires d’un diplôme d’entraîneur ou d’aide-entraineur délivré par la F.F.T.A, ainsi que les candidats
+        ayant obtenu leur examen de préqualification.</li>
+    </ul>
+    <p>Les entraînements commencent courant septembre pour se terminer fin juillet.</p>
+    <p>Selon les disponibilités de l'entraîneur et de la salle, des séances encadrées pourront être organisées au cours
+    des mois de juillet et/ou d’août et/ou de septembre.</p>
+    <h2> Les dangers individuels</h2>
+    <ul>
+    <li>Tout débutant doit porter un protège-bras et une palette. Ces
+            accessoires évitant bien des déconvenues, voire des accidents.</li>
+    <li>La position de tir doit assurer le libre passage de la corde. Le port de vêtements ajustés est
+            conseillé (l'archer peut, sur demande, faire l'acquisition d'un plastron).</li>
+    <li>Ne pas utiliser de flèches trop courtes, celles-ci peuvent occasionner de graves blessures à la
+            main d’arc si elles tombent du repose-flèche lors des tirs.</li>
+    <li>Au pas de tir, ne jamais ramasser une flèche lorsqu'elle est tombée sans l'accord de l'entraineur ou
+            de l'encadrant.</li>
+    <li>Ne jamais passer devant une ligne d’archers de près ou de loin.</li>
+    <li>En allonge, ne jamais lâcher une corde sans flèche, les risques de rupture de matériel sont très
+            importants.</li>
+    <li>Ne jamais courir sur un pas de tir lorsque l'on va chercher les flèches tirées.</li>
+    <li>En allant chercher ses flèches à la cible, faire attention aux flèches tombées hors de la cible,
+            aborder la cible par le coté, en marchant.</li>
+    <li>Ne pas se servir d’un arc et/ou d’une corde endommagée. Il y a là aussi un risque de rupture de l’un
+            ou de l’autre.</li>
+    <li>Ne pas arracher ses flèches en même temps qu’un autre archer sur la cible. On risque, lors de
+            cette action, d’être blessé au visage par l’encoche d’une flèche qu’un autre tireur serait en
+            train d’arracher.</li>
+    <li>S’assurer avant d’arracher sa flèche qu’aucun archer ne se trouve dans la trajectoire de la flèche.</li>
+    <li>Se positionner sur le côté pour arracher ses flèches. Une main tient le blason, l’autre main enlève la
+            flèche.</li>
+</ul>
+     <h2> Les dangers Collectifs</h2>
+    <ul>
+        <li>Les archers doivent toujours être positionnés sur une seule ligne de tir.</li>
+        <li>Ne jamais pointer un arc vers quelqu’un, avec ou sans flèche.</li>
+        <li>Ne jamais toucher un archer en position de tir, sauf l’entraineur et l’aide entraineur après accord de
+            l’archer.</li>
+        <li>Ne jamais tirer un arc horizontalement sur la ligne de tir, l’envergure des branches pouvant gêner un
+            autre tireur.</li>
+        <li>Ne jamais tirer avant que tout le monde soit de retour sur la ligne de tir.</li>
+        <li>Ne jamais tirer une flèche verticalement, il est impossible de savoir à quel endroit elle retombera.</li>
+        <li>Ne pas se tenir juste derrière les flèches lorsqu’un archer les retire de la cible.</li>
+        <li>Veiller à ce qu’un archer ne tire jamais avec une corde ou des flèches endommagées.</li>
+        <li>Ne pas bander un arc, même sans flèche, en dehors du pas de tir.</li>
+    </ul>
+    <h3>LA VIE EN CLUB, DANS LE CAS D’UNE PRATIQUE AVEC UNE ARME, DOIT ÊTRE SOUMISE À CERTAINES RÈGLES DE SECURITE,
+        CELLES INDIQUÉES CI-DESSUS NE SONT PAS LIMITATIVES.</h3>
+        <p>La Salle multifonctions est équipée d'un défibrillateur automatisé (DAE) situé à l'entrée principale.
+            En cas d'urgence, appeler les secours au 18 ou 112 (pompiers) ou au 15 (SAMU). Un téléphone mobile permet
+            de joindre les secours même si sa batterie est vide.</p>
+        <p>La salle multifonctions est équipée d'un local médical au sous-sol (face à l'ascenseur) doté d'une trousse pour
+            les premiers secours. Chaque dirigeant possédant un badge de la salle peut y accéder pendant les créneaux
+            alloués à l'association</p>
+        <p>En cas d'accident de tir, l'archer blessé devra avertir immédiatement un dirigeant. L'archer devra également,
+s           elon la nature de la blessure, déclarer son accident dans les 5 jours sur le portail de la FFTA : 
+        <a href="https://www.ffta.fr/nos-clubs/assurances-licencies-et-clubs/comment-declarer-un-accident" 
+        target="_blank" rel="noopener noreferrer">Déclarer un accident sur le site de la FFTA</a></p>    
+        <p>Chaque archer est responsable de ses effets personnels laissés dans l'enceinte de l'équipement. Aucun recours
+            ne pourra être formulé contre le club.</p>
+  </div>
+ 
+    <div class="article">
+    <h2>Article 10 – ENTRAINEMENTS</h2>
+    <p>Les dispositions ci-dessous sont complémentaires de l’article 9 du présent règlement.
+        L’entraînement est un moment important dans le déroulement d’une saison sportive, à ce titre, certaines règles sont à
+        respecter :</p>
+        <h3> Au titre de l'archer : </h3> 
+    <ul>
+        <li>Écouter et appliquer les conseils de son entraîneur.</li>
+        <li>Respecter l’ambiance de travail du cours.</li>
+        <li>Ne pas perturber par son attitude les autres archers.</li>
+        <li>Prévenir de son absence à un entraînement.</li>
+        <li>S’excuser pour son absence à un entraînement.</li>
+        <li>Respecter les heures de début et de fin d’entraînement.</li>
+        <li>Participer au rangement des blasons et du matériel collectif, balayer au pied des buttes de tir.</li>
+    </ul>
+        <h3>Au titre de l’entraîneur et l’aide-entraineur :</3>
+        <ul>
+        <li>Apporter à chaque archer une méthode d’apprentissage.</li>
+        <li>Conseiller et aider tous les archers dans leur progression.</li>
+        <li>Tenir compte des différences de niveau entre les archers.</li>
+        <li>Prévenir de son absence à un entraînement.</li>
+        <li>S’excuser pour son absence à un entraînement.</li>
+        <li>Respecter les heures de début d’entraînement et de fin.</li>
+        <li>Répartir équitablement entre les archers les tâches de rangement et de balayage.</li>
+        </ul>
+           
+             <div class="article">
+    <h2>Article 11 – MATERIEL DE L'ARCHER</h2>
+    <p><strong>Un arc est prêté à chaque parEcipant pour la première saison (initiation).</strong></p>
+    <p>Ce matériel, avant sa mise à disposition, aura été préalablement minutieusement vérifié par l’entraineur. Le club
+          décline toute responsabilité sur l'usage fait par l'archer au cours de la saison.
+          Une convention de prêt (avec état du matériel) sera établie et une caution sera demandée pour les kits d'arcs. (Chèque
+          non encaissé et restitué à l’archer lors du retour du matériel prêté)
+          L'archer est et reste responsable du matériel confié et en assurera son entretien jusqu'à sa restitution à l’entraineur.
+          Toute dégradation sera facturée à l'archer après vérification du matériel par l’entraineur.</p>
+        <h3> L’achat un kit de débutant sera exigé :</h3> 
+        <p>Il comprend : </p>
+    <ul>
+        <li>Un jeu de 12 flèches d’initiation</li>
+        <li>Un carquois</li>
+        <li>Une palette</li>
+        <li>Un protège bras</li>
+        <li>Une dragonne</li>
+    </ul>
+    <p>Pour des raisons de qualité, d’homogénéité et de réparation, ce matériel fera l’objet d’un achat groupé effectué par
+        le club. Lors de la première année d’adhésion au club, le prix du kit s’ajoute au prix de la licence.
+        Le prix de ce kit peut varier selon le matériel disponible en archerie.</p>
+        <P><strong>Ce kit restera la propriété de l’archer. (le renouvellement resteras à la charge de l’archer)</strong></p>
+        <h2>Pour la deuxième saison (progression), l'archer devra posséder son propre matériel.</h2>
+        <ul>
+        <li>En fonction des capacités financières du club et sur décision conjointe du Bureau, le club pourra acheter
+              le matériel pour l’archer et lui apporter une aide financière. Cette aide sera sous forme de paiement
+              échelonné sur la saison sportive. L’archer remettra au trésorier un nombre de chèques égal au nombre
+              de mensualités convenues. Les encaissements seront mensuels. En cas de non- paiement intégral au
+              31 mai, le matériel restera la propriété du club.</li>
+        <li>En cas d’impossibilité d’acquisition, l’archer pourra louer son matériel auprès du
+              club selon les disponibilités. Pour tout prêt ou location de matériel, un contrat en
+              deux exemplaires sera établi entre le club et l’archer.
+              Ce contrat mentionnera la liste des matériels prêtés ou loués, ainsi que le montant de la caution, la valeur
+              des matériels, l’échéancier de paiement des loyers, les contreparties en cas de perte ou de casse et de
+              retard de paiement.</li>
+        </ul>
+  
+<div class="article">
+    <h2>Article 12 – TENUE DE CLUB</h2>
+    <p>La tenue de club des Archers du Castel est constituée d’un pantalon (noir ou gris) et d’un maillot spécifique à l’effigie
+        du club (ci-dessous, le polo adulte). Le polo enfant est blanc uni. Ces polos sont floqués des logos des sponsors.</p>
+    <p><strong>Cette tenue de club est obligatoire pour :</strong></p>    
+    <ul>
+      <li>Toute participation à un concours quelle que soit sa nature, avec une tolérance pour les disciplines de
+          parcours (campagne, 3D, nature, …)</li>
+      <li>Monter sur un podium pour recevoir les récompenses.</li>
+    </ul>
+    <p>Une tenue (pantalon et polo) intégralement blanche pourra être tolérée.</p>
+    <p>Lors des entraînements et des cours, les archers devront porter une tenue adaptée à la pratique du tir à l’arc. Des
+        vêtements près du corps (ou un plastron) sont recommandés afin de ne pas gêner l'archer dans ses mouvements.</p>
+    <p>L’entraineur ou l’aide-entraineur a le droit de refuser un archer qui porterait une tenue inadaptée.</p>
+    <p>Le port de chaussures de sport avec semelles claires est très fortement conseillé pour le tir en salle.</p>    
+  </div>
+ 
+<div class="article">
+    <h2>Article 13 – PARTICIPATION AUX CONCOURS</h2>
+    <p>Une liste des concours organisés sera affichée à la salle en début de saison.</p>
+    <p>Les inscriptions aux concours sont à effectuer par l'archer auprès de l'entraineur ou du Président.</p>    
+    <p>L'archer devra s'acquitter des droits d'inscription (hors championnats Départemental, Régional et France pris en
+        charge par le club) L’inscription à un concours doit être motivée et réfléchie. Un archer inscrit à un concours et
+        se trouvant dans l’impossibilité d’y participer doit en informer le responsable des inscriptions dans les meilleurs
+        délais. (Les places sont limitées à la taille de la salle du club organisateur.) L’inscription à un concours déclenche
+        toute une procédure pour notre club et le club organisateur.</p>
+    <p>Seuls les adhérents (archers comme entraîneurs) désignés par le Président sur proposition de l'entraîneur sont
+      autorisés à participer aux :</p>
+    <ul>
+      <li>Championnats Départementaux par équipes de club</li>
+      <li>Championnats Régionaux par équipes de club</li>
+      <li>Championnats de France par équipes de club.</li>
+    </ul>
+  </div>
+ 
+ <div class="article">
+    <h2>Article 14 – LES COMMISSIONS</h2>
+    <p>Lors de la première réunion de début de saison du Conseil d’Administration, et dans un délai maximum de trois
+          mois après l'Assemblée Générale élective, des Commissions peuvent être constituées si besoin, elles sont de plusieurs
+          types :</p>
+    <ul>
+      <li>Les commissions spécialisées, prévues par le Conseil d’Administration ou son Bureau</li>
+      <li>Les commissions de travail, mises en place par le Comité d’Administration ou son Bureau en cours de
+          mandat, destinées à fonctionner pendant une durée déterminée.</li>
+    </ul>
+    <p>Chacune de ces Commissions est animée par un Référent (désigné par le Conseil d’Administration, choisi parmi
+          les membres élus du Conseil d’Administration) qui a la faculté de se faire assister par tout archer licencié du
+          club susceptible d'en enrichir le fonctionnement.</p>
+    <p>Une interaction entre toutes les Commissions est indispensable</p>
+    <p>Leur rôle d'étude, de réflexion et de propositions est essentiel au fonctionnement du Conseil d’Administration.
+          Leurs travaux sont conformes à la politique générale fixée par le Conseil d’Administration des Archers du Castel
+          (elle-même en accord avec les politiques générales du Comité Départemental, du Comité Régional et de la
+          Fédération).</p>
+    <p>Les Référents des commissions rendent compte de l'avancement de leurs travaux au Conseil d’Administration
+          et à l'Assemblée Générale qui seuls sont habilités à prendre des décisions.</p>
+    <p>Les Commissions peuvent bénéficier d'un budget voté par le Conseil d’Administration. Le Président du club des
+          Archers du Castel est membre de droit de toutes les Commissions. Il doit être systématiquement prévenu des
+          dates de leurs réunions.</p>
+    <p>Les comptes-rendus des réunions de ces Commissions ainsi que celles du Comité Directeur sont établis au plus tard
+          30 (trente) jours calendaires et doivent être approuvés par l'ensemble des membres du Bureau préalablement à
+          leur diffusion.</p>
+    <p>Les missions des Commissions prennent fin avec le mandat du Conseil d’Administration ou sur décision de celui-ci.</p>
+  </div>
+  <div class="article">
+      <h2>Article 15 - ENGAGEMENTS RELATIFS AUX FORMATIONS PRISES EN CHARGE PAR LE CLUB</h2>
+      <p>Le club participe au frais de déplacement des archers dans le cadre de leurs formations. L'archer doit aviser le Conseil
+            d'Administration avant tout engagement de formation.</p>
+      <p>Chaque licencié, dont une formation (notamment entraîneur, arbitre, dirigeant et aide entraineur) est prise en
+            charge par le club, s’engage à exécuter les missions liées à cette formation pendant l’année de formation sous
+            peine de devoir rembourser tout ou partie des frais de formation et/ou de déplacement afférents à cette
+            formation, sur décision du Conseil d’Administration.</p>    
+      <p>Le remboursement des frais ne sera pas dû si le licencié en question justifie d’un motif professionnel, scolaire
+            ou médical l’empêchant d’exécuter son engagement. Tout autre motif sera laissé à l’appréciation du Conseil
+            d’Administration.</p>
+      <p>En tout état de cause, le licencié s’engage à prévenir par écrit le Conseil d’Administration de son départ le plus
+          tôt possible et au plus tard le 1er août de la saison sportive en cours.</p>
+      <h2>Barème de remboursement des frais de déplacement pour formations
+          (Réactualisation selon la réglementation en vigueur)</h2>
+<table style="width:100%; border: 2px solid black; border-collapse: collapse; text-align:center;">
+    <tr>
+      <td style="border: 1px solid black; padding:8px;">Indemnité kilométrique</td>
+      <td style="border: 1px solid black; padding:8px;">0.30€</td>
+      <td style="border: 1px solid black; padding:8px;">Selon le type de véhicule,<br>
+        Itinéraire calculé selon « Via Michelin »<br>
+        Du domicile au centre de formation</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding:8px;">Repas</td>
+      <td style="border: 1px solid black; padding:8px;">Au forfait 20€</td>
+      <td style="border: 1px solid black; padding:8px;">Par repas (déjeuner et/ou dîner)</td>
+    </tr>
+  </table>
+  <h3 style="color:red; font-weight:bold; font-size:2.5rem;">Justificatifs à fournir :  Attestation de présence à la formation</h3>
+    </div>
+<div class="article">
+    <h2>Article 16 - RAPPEL DE LA LOI N°84-610 du 16/07/1984, ArPcle 43-lll RelaPve à l’organisaPon et à
+          la promotion des activités physiques et sportives a été modifiée par la loi N°2000-627.</h2>
+    <p>"Désormais, nul ne peut encadrer une activité physique et sportive et nul ne peut exploiter un établissement au
+        sein duquel de telles activités sont pratiquées s’il a fait l’objet d’une condamnation pour crime ou pour l’un des
+        délits suivants : violences, menaces, risques causés à autrui, proxénétisme, mise en péril des mineurs, délits
+        institués par la loi relative à la lutte contre le dopage, délits fiscaux, de même que s’il a fait l’objet d’une mesure
+        administrative d’interdiction de participer à la direction ou à l’encadrement d’un centre de vacances ou de loisirs"</p>    
+  </div>
+<div class="article">
+    <h2>ARTICLE 17 - RAPPEL DE LA LOI SUR LA DISCRIMINATION (Article 225-1 du Code Pénal Modifié par
+                LOI n°2022-401 du 21 mars 2022 - art. 9)</h2>
+    <p>"Constitue une discrimination toute distinction opérée entre les personnes physiques sur le fondement de leur
+          origine, de leur sexe, de leur situation de famille, de leur grossesse, de leur apparence physique, de la
+          particulière vulnérabilité résultant de leur situation économique, apparente ou connue de son auteur, de leur
+          patronyme, de leur lieu de résidence, de leur état de santé, de leur perte d'autonomie, de leur handicap, de
+          leurs caractéristiques génétiques, de leurs moeurs, de leur orientation sexuelle, de leur identité de genre, de
+          leur âge, de leurs opinions politiques, de leurs activités syndicales, de leur qualité de lanceur d'alerte, de
+          facilitateur ou de personne en lien avec un lanceur d'alerte au sens, respectivement, du I de l'article 6 et des 1°
+          et 2° de l'article 6-1 de la loi n° 2016-1691 du 9 décembre 2016 relative à la transparence, à la lutte contre la
+          corruption et à la modernisation de la vie économique, de leur capacité à s'exprimer dans une langue autre que
+          le français, de leur appartenance ou de leur non-appartenance, vraie ou supposée, à une ethnie, une Nation, une
+          prétendue race ou une religion déterminée.
+          Constitue également une discrimination toute distinction opérée entre les personnes morales sur le fondement
+          de l'origine, du sexe, de la situation de famille, de la grossesse, de l'apparence physique, de la particulière
+          vulnérabilité résultant de la situation économique, apparente ou connue de son auteur, du patronyme, du lieu
+          de résidence, de l'état de santé, de la perte d'autonomie, du handicap, des caractéristiques génétiques, des
+          moeurs, de l'orientation sexuelle, de l'identité de genre, de l'âge, des opinions politiques, des activités syndicales,
+          de la qualité de lanceur d'alerte, de facilitateur ou de personne en lien avec un lanceur d'alerte, au sens,
+          respectivement, du I de l'article 6 et des 1° et 2° de l'article 6-1 de la loi n° 2016-1691 du 9 décembre 2016
+          précitée, de la capacité à s'exprimer dans une langue autre que le français, de l'appartenance ou de la nonappartenance,
+          vraie ou supposée, à une ethnie, une Nation, une prétendue race ou une religion déterminée des
+          membres ou de certains membres de ces personnes morales"</p>    
+  </div>
+<div class="article">
+    <h2>Article 18 - SANCTIONS</h2>
+    <p>Avertissement du Conseil d’Administration :</p>    
+    <ul>
+    <li>En cas de non-respect des règles de vie collective. Exclusion temporaire ou définitive en cas de récidive</li>
+    <li>En cas de non-respect des règles de sécurité des tirs ou de transgression des règles imposées par une
+        législation nationale telles que la loi sur le tabagisme ou la consommation d’alcool dans des lieux ouvert
+        aux mineurs.</li>
+    <li>En cas de non-respect des articles 16 et 17 du présent règlement intérieur.
+        ARTICLE</li>
+    </ul>
+  </div>
+<div class="article">
+    <h2>Article 19 - PARTICIPATION A LA VIE DU CLUB</h2>>
+    <p>Les membres se doivent, autant que faire se peut, de participer à l’organisation des compétitions ou des
+      manifestations organisées par le club.</p>
+  </div>
+<div class="article">
+    <h2>20 - ASSURANCES</h2>
+    <ul>
+    <li>Le club a souscrit une assurance Responsabilité Civile (RC) pour couvrir sa responsabilité dans le cadre
+        de l'utilisation des locaux et dans le cadre des activités proposées. (Groupama – 13 Rue Amiral Ronarc'h
+        29000 Quimper - Contrat n°098974140100)</li>
+    <li>Pour l'archer, une assurance Individuelle Accident (IA) est incluse dans le montant de la licence. Elle est
+    souscrite par la Fédération Française de Tir à l'Arc (FFTA)
+    En cas d'accident de tir, l'archer blessé devra avertir immédiatement un dirigeant. L'archer devra
+    également, selon la nature de la blessure, déclarer son accident dans les 5 jours sur le portail de la FFTA<a href="https://www.ffta.fr/nos-clubs/assurances-licencies-et-clubs/comment-declarer-un-accident" target="_blank">
+    Comment déclarer un accident
+  </a>
+</li>
+    </ul>
+    <p>Les membres se doivent, autant que faire se peut, de participer à l’organisation des compétitions ou des
+      manifestations organisées par le club.</p>
+  </div>
+  <div class="article">
+    <h2>Article 21 – Communication et protection des données</h2>
+    <p>Les données collectées par le club sont exclusivement dédiées au bon fonctionnement de l'association. Elles ne
+        peuvent, en aucun cas, être cédées ou vendues à aucun organisme..</p>
+    <ul>
+      <li>L’accord écrit de l’adhérent est obligatoire pour faire paraître le nom ou la photo (Individuelle ou de
+      groupe) sur le site internet du club et/ou sur les réseaux sociaux dans le strict cadre des activités du
+      club (résultats en compétition, animation, manifestations du club, trombinoscope, document interne,
+      ...)</li>
+      <li>J'autorise les dirigeants du club à intégrer mes données dans l'annuaire interne du club pour toutes
+          communications liées à l'activité du tir à l'arc</li>
+      <li>L'archer peut, conformément à la réglementation sur les données personnelles, exercer son droit de
+          modification ou de retrait,</li>
+      <li>Toutes les données relatives à un archer qui aurait quitté le club seront systématiquement supprimées en fin
+        de saison.</li>
+    </ul>
+    <p>Textes réglementaires :</p>
+    <ul>
+    <li>Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif
+        à la protection des personnes physiques à l'égard du traitement des données à
+        caractère personnel et à la libre circulation de ces données ;</li>
+    <li>Libre circulation de ces données (règlement (UE) 2016/679)</li>
+    <li>Loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, modifiée.</li>
+    </ul>
+
+    <p>CNIL (Commission Na,onale de l'Informa,que et des Libertés), 3 Place de Fontenoy, TSA 80715, 75334 PARIS Cedex 07</p>
+  </div>
+
+</body>
+
+{% endblock %}

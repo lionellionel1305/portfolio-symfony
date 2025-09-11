@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les types de tirs - Les Archers du Castel{% endblock %}
+
+{% block body %}
+<div class="text-center"><br>
+    <div class="text-center my-1">
+           <h1 style="color:#0000ff; font-weight:bold; font-size:4.5rem;">
+    Les différents types de tirs 🏹</h1>
+    <br><br>
+       </div>   
+
+
+    <div class="card shadow-lg p-4 mb-4">
+        <h2 class="text-primary">🎯 Tir en salle</h2>
+        <p>De <strong>5m à 30m</strong> (et en concours à <strong>18m</strong>).</p>
+        <p>Pratiqué en intérieur, généralement dans un gymnase.</p>
+        <p>Distances courtes : de 5 à 30 mètres, avec une référence en compétition à 18 mètres.</p>
+        <p>C’est la discipline la plus accessible pour les débutants.</p>
+    </div>
+
+    <div class="card shadow-lg p-4 mb-3">
+        <h2 class="text-success">🌳 Tir en extérieur</h2>
+        <p>De <strong>10m à 70m</strong> (cibles).</p>
+        <p>Pratiqué en plein air, sur un terrain plat</p>
+        <p>Discipline officielle des Jeux Olympiques.</p>
+        <p>Demande une bonne gestion du vent, de la lumière et de la concentration.</p>
+    </div>
+
+    <div class="card shadow-lg p-4 mb-3">
+        <h2 class="text-warning">🏔️ Tir en campagne</h2>
+        <p>Se pratique en pleine nature (forêts, collines, chemins, bord de mer,...).</p>
+        <p>De <strong>5m à 60m</strong>,parfois inconnues pour ajouter de la difficulté</p>
+        <p>Le terrain n’est pas plat, ce qui oblige à adapter sa position et son tir.</p>
+        <p>Excellente discipline pour développer la polyvalence et la lecture du terrain.</p>
+    </div>
+
+    <div class="card shadow-lg p-4 mb-3">
+        <h2 class="text-danger">🐺 Tir 3D</h2>
+        <p>Cibles en mousse représentant des animaux grandeur nature.</p>
+        <p>De <strong>5m à 45m</strong> distances souvent inconnues. </p>
+        <p>Donne l’impression d’une chasse sportive (sans danger ni animaux réels).</p>
+        <p>Très ludique et apprécié pour son côté réaliste et immersif.</p>
+    </div>
+</div>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Tailles de blasons selon les disciplines</h2>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center align-middle">
+            <thead class="table-primary">
+                <tr>
+                    <th>Discipline</th>
+                    <th>Distance</th>
+                    <th>Taille du blason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">🎯 Tir en salle</td>
+                    <td>18 m</td>
+                    <td>40 cm (triple ou simple)</td>
+                </tr>
+                <tr>
+                    <td>Débutants / Jeunes</td>
+                    <td>60 cm</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">🏹 Tir en extérieur</td>
+                    <td>70 m</td>
+                    <td>122 cm</td>
+                </tr>
+                <tr>
+                    <td>50 m</td>
+                    <td>80 cm</td>
+                </tr>
+                <tr>
+                    <td>30 m & 20 m</td>
+                    <td>80 cm ou 122 cm</td>
+                </tr>
+                <tr>
+                    <td>🌲 Tir en campagne</td>
+                    <td>5 à 60 m</td>
+                    <td>20, 40, 60 ou 80 cm (selon la distance)</td>
+                </tr>
+                <tr>
+                    <td>🐺 Tir 3D</td>
+                    <td>5 à 45 m</td>
+                    <td>Cibles en mousse (animaux grandeur nature)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<style>
+        .blasons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .blason {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+        }
+        .blason img {
+            max-width: 100%;
+            height: auto;
+        }
+        .blason p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+<h1>LES DIFFÉRENTS BLASONS</h1>
+
+<div class="blasons-container">
+    <div class="blason">
+        <img src={{ asset('images/blason1.png') }} alt="Blason 40cm à 122cm">
+        <p>Blason d.40cm à d.122cm</p>
+    </div>
+    <div class="blason">
+        <img src={{ asset('images/blason2.png') }} alt="Trispot poulies">
+        <p>Trispot poulies</p>
+    </div>
+    <div class="blason">
+        <img src={{ asset('images/blason3.png') }} alt="Blason classique noir">
+        <p>Blason classique</p>
+    </div>
+    </div>
+    <div class="blasons-container">
+    <div class="blason">
+        <img src={{ asset('images/blason4.png') }} alt="Blasons campagne">
+        <p>Blasons campagne</p>
+    </div>
+    <div class="blason">
+        <img src={{ asset('images/blason5.png') }} alt="Cible 3D">
+        <p>Cible 3D</p>
+    </div>
+    <div class="blason">
+        <img src={{ asset('images/blason6.png') }} alt="Blason animalier">
+        <p>Blason animalier</p>
+    </div>
+    <div class="blason">
+       <img src={{ asset('images/blason7.png') }} alt="Blason tir Beursa">
+        <p>Blason tir Beursa</p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vidéos{% endblock %}
+
+{% block body %}
+<style>
+
+    .text-center {
+        text-align: center;
+    }
+
+    h1, h2, h3, p {
+        margin: 0.5rem 0;
+    }
+
+    h2 {
+        color: #0000ff;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    
+
+    .card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 800px;
+        border-radius: 12px;
+        border: none;
+    }
+
+</style>
+
+<div class="section text-center">
+    <h1 style="color:#0000ff; font-weight:bold; font-size:4.5rem;">🎥 Posture et Formation 🎥</h1><br><br>
+</div>
+
+<div class="section video-grid">
+    <div class="card text-center">
+        <h2>Le mouvement de l'archer</h2>
+        <p>Tirez Juste épisode 1</p>
+        <iframe src="https://www.youtube.com/embed/QlVipew4oMI?list=PLBvLOHXTwPOeVWNuoP1lwqL9bEHE0-E6w&index=1"
+                title="Tirez Juste épisode 1"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="card text-center">
+        <h2>Le verrouillage du bras d'arc</h2>
+        <p>Tirez Juste épisode 2</p>
+        <iframe src="https://www.youtube.com/embed/sVdF-ab10PQ?list=PLBvLOHXTwPOeVWNuoP1lwqL9bEHE0-E6w&index=2"
+                title="Tirez Juste épisode 2"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="card text-center">
+        <h2>Les membres inférieurs</h2>
+        <p>Tirez Juste épisode 3</p>
+        <iframe src="https://www.youtube.com/embed/LSEKsN1TEBA?list=PLBvLOHXTwPOeVWNuoP1lwqL9bEHE0-E6w&index=3"
+                title="Tirez Juste épisode 3"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="card text-center">
+        <h2>Le tronc</h2>
+        <p>Tirez Juste épisode 4</p>
+        <iframe src="https://www.youtube.com/embed/Pki4knBEX6U?list=PLBvLOHXTwPOeVWNuoP1lwqL9bEHE0-E6w&index=5"
+                title="Tirez Juste épisode 4"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="card text-center">
+        <h2>La Tête et les repères au visage</h2>
+        <p>Tirez Juste épisode 5</p>
+        <iframe src="https://www.youtube.com/embed/ZDfb8sFnBHQ?list=PLBvLOHXTwPOeVWNuoP1lwqL9bEHE0-E6w&index=4"
+                title="Tirez Juste épisode 5"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card text-center">
+        <h2> Le clicker</h2>
+        <p>Tirez Juste épisode 6</p>
+        <iframe src="https://www.youtube.com/embed/KedJ_Wofm70?list=PLBvLOHXTwPOeVWNuoP1lwqL9bEHE0-E6w&index=6"
+                title="Tirez Juste épisode 6"
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+{% endblock %}  {# ✅ on ferme body avant #}
+
+{% block javascripts %}
+<style>
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 vidéos par ligne */
+        gap: 2rem; /* espace entre les vidéos */
+    }
+
+    .card iframe {
+        width: 100%;
+        height: 350px; /* ajuste la hauteur selon ton besoin */
+        border-radius: 12px;
+        border: none;
+    }
+</style>
+{% endblock %}

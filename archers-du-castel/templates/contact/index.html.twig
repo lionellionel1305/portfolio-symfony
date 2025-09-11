@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez-nous{% endblock %}
+
+{% block body %}
+<style>
+  body { background-color: #D2C5B0; border: none; }
+  .contact-form { max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  .contact-form h1 { text-align: center; color: #0000ff; margin-bottom: 1.5rem; }
+  label { display: block; margin-top: 1rem; font-weight: bold; }
+  input, textarea { width: 100%; padding: 0.8rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 5px; }
+  button { margin-top: 1.5rem; width: 100%; padding: 1rem; background: #0000ff; color: #fff; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; }
+  button:hover { background: #1a73e8; }
+</style>
+
+<div class="contact-form">
+  <h1>Contactez-nous</h1>
+
+  {% for message in app.flashes('success') %}
+    <div style="color:green;">{{ message }}</div>
+  {% endfor %}
+  {% for message in app.flashes('error') %}
+    <div style="color:red;">{{ message }}</div>
+  {% endfor %}
+
+  <form method="POST" action="{{ path('app_contact') }}">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <input type="checkbox" id="consent" name="consent" required>
+    <label for="consent">J’accepte que mes données soient utilisées uniquement pour répondre à ma demande.</label>
+
+    <input type="hidden" name="_token" value="{{ csrf_token('contact_form') }}">
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <p>Les informations que vous nous envoyez via le formulaire de contact sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas conservées plus longtemps que nécessaire et ne sont pas partagées avec des tiers.</p>
+</div>
+{% endblock %}

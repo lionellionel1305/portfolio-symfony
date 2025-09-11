@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos partenaires - Les Archers du Castel{% endblock %}
+
+{% block stylesheets %}
+<style>
+    .partners-section {
+        padding: 3rem 1rem;
+        max-width: 1800px; /* un peu plus large */
+        margin: 0 auto;
+    }
+    .partners-title {
+        color: #0000ff;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 5rem; /* plus d'espace sous le titre */
+    }
+    .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3.5rem 4rem; /* espace vertical augmenté */
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 6.5rem; /* espace entre les lignes */
+    }
+    .partners-grid.last-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .partner-logo {
+        max-width: 195px;  /* 150px + 30% */
+        max-height: 130px; /* 100px + 30% */
+        object-fit: contain;
+        filter: grayscale(20%);
+        transition: transform 0.3s, filter 0.3s;
+    }
+    .partner-logo:hover {
+        transform: scale(1.1);
+        filter: grayscale(0%);
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="text-center"><br>
+    <div class="text-center my-1">
+    <h1 style="color:#0000ff; font-weight:bold; font-size:4.5rem;">🤝 Nos Partenaires</h1>
+    </div>
+    </div><br><br><br>
+    <!-- 1ère ligne -->
+    <div class="partners-grid">
+        <img src="{{ asset('images/partenaires/plogastel1.png') }}" alt="Logo de Plogastel Saint Germain" class="partner-logo">
+        <img src="{{ asset('images/partenaires/departement.png') }}" alt="Logo département du Finistère" class="partner-logo">
+        <img src="{{ asset('images/partenaires/Adel_Services.png') }}" alt="Logo entreprise Adel Services" class="partner-logo">
+        <img src="{{ asset('images/partenaires/gf.png') }}" alt="Logo entreprise GF ETP" class="partner-logo">
+    </div>
+
+    <!-- 2ème ligne -->
+    <div class="partners-grid">
+        <img src="{{ asset('images/partenaires/U.png') }}" alt="Logo Super U de Landudec" class="partner-logo">
+        <img src="{{ asset('images/partenaires/Groupama.png') }}" alt="Logo Groupama" class="partner-logo">
+        <img src="{{ asset('images/partenaires/CA1.png') }}" alt="Logo Crédit Agricole du Finistère" class="partner-logo">
+        <img src="{{ asset('images/partenaires/Lourenco.png') }}" alt="Logo entreprise Lourenço Menez" class="partner-logo">
+    </div>
+
+    <!-- 3ème ligne -->
+    <div class="partners-grid last-row">
+        <img src="{{ asset('images/partenaires/JP.png') }}" alt="Logo entreprise JPC Réseaux" class="partner-logo">
+        <img src="{{ asset('images/partenaires/Impress29.png') }}" alt="Logo Impress29 à Landudec" class="partner-logo">
+        <img src="{{ asset('images/partenaires/jacjac.png') }}" alt="Logo La Cuisine de Jac Jac" class="partner-logo">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les horaires{% endblock %}
+
+{% block stylesheets %}
+
+<style>
+   
+
+    .text-center {
+        text-align: center;
+    }
+
+    h1, h2, h3, h4 {
+        margin: 0.5rem 0;
+    }
+
+    h2 {
+        color: #0000ff;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    
+
+    .section {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .lieu {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .lieu img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .highlight {
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="section text-center">
+    <h1 style="color:#0000ff; font-weight:bold; font-size:4.5rem;">Les horaires de tirs 🏹</h1>
+    <p>La saison <strong>"Salle"</strong> démarre début septembre et se termine fin mars, sur décision du Conseil d’Administration. Il sera toutefois possible de continuer à tirer en salle au-delà de cette date.</p>
+    <p>La salle pourra être ouverte par le référent selon un planning défini. Le référent est nommé par le Conseil d’Administration.</p>
+
+    <p>La saison <strong>"Extérieure"</strong> démarre début avril et se termine fin juillet. Possibilité de repli en salle selon météo, les archers en seront informés via WhatsApp et/ou SMS.</p>
+</div>
+
+<div class="section">
+    <div class="card">
+        <h3>🎯 Tir en salle (septembre à avril)</h3>
+        <p><span class="highlight">Distance :</span> de 5m à 30m (concours à 18m)</p>
+
+        <h4>Mardi</h4>
+        <p>18h15 - 19h15 : Réservé aux jeunes (8-18 ans)</p>
+        <p>19h30 - 21h30 : Ouvert à tous (compétition et loisir)</p>
+
+        <h4>Jeudi</h4>
+        <p>19h30 - 21h30 : Ouvert à tous</p>
+
+        <h4>Samedi</h4>
+        <p>9h00 - 11h00 : Réservé aux jeunes (8-18 ans)</p>
+
+        <h4>Dimanche</h4>
+        <p>10h00 - 12h00 : Ouvert à tous</p>
+    </div>
+
+    <div class="card">
+        <h3>🎯 Tir en extérieur (avril à juillet)</h3>
+        <p><span class="highlight">Distance :</span> de 10m à 70m (cibles)</p>
+
+        <h3>Mardi</h3>
+        <p>18h15 - 19h15 : Réservé aux jeunes (8-18 ans)</p>
+        <p>19h30 - 21h30 : Ouvert à tous</p>
+
+        <h3>Jeudi</h3>
+        <p>19h30 - 21h30 : Ouvert à tous</p>
+
+        <h3>Samedi</h3>
+        <p>9h00 - 11h00 : Réservé aux jeunes (8-18 ans)</p>
+
+        <h3>Dimanche</h3>
+        <p>10h00 - 12h00 : Ouvert à tous</p>
+    </div>
+</div>
+
+<div class="section text-center">
+    <h3>Terrain à la ZA de Kérandoaré à Plogastel-Saint-Germain</h3>
+    <div class="lieu">
+        <img src="{{ asset('images/tir-exterieur.png') }}" alt="Tir extérieur">
+    </div>
+</div>
+
+<div class="section text-center">
+    <h3>Salle Multifonctions au stade du Leurré à Plogastel-Saint-Germain</h3>
+    <div class="lieu">
+        <img src="{{ asset('images/salle-entrainement.png') }}" alt="Salle d'entraînement">
+    </div>
+</div>
+{% endblock %}

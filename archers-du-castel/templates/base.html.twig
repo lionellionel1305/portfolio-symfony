@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Les Archers du Castel{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    {% block stylesheets %}{% endblock %}
+    <style>
+        body { background-color: #D2C5B0; border: none; }
+        .navbar .dropdown-menu { background-color:#0F9DE8 ; border: none; }
+        .navbar .dropdown-item { color: #fff; }
+        .navbar .dropdown-item:hover, .navbar .dropdown-item:focus { color: #fff; background-color: #0F9DE8; }
+        .navbar .dropdown-item.active, .navbar .dropdown-item:active { color: #fff; background-color: #0F9DE8; }
+    </style>
+</head>
+<body>
+
+<!-- Navbar responsive -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0F9DE8;">
+   
+        <a class="navbar-brand" href="{{ path('app_main') }}"><h1>🏹 Les Archers du Castel 🏹 </h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-white fw-bold {% if app.request.attributes.get('_route') == 'app_main' %}active{% endif %}"
+                       href="{{ path('app_main') }}">Accueil</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold text-white {% if app.request.attributes.get('_route') in ['app_horaire','app_tarif'] %}active{% endif %}"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        le Club
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'app_histoire' %}active{% endif %}" href="{{ path('app_histoire') }}">L'histoire du club</a></li>
+                        <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'app_horaire' %}active{% endif %}" href="{{ path('app_horaire') }}">Horaires de tir</a></li>
+                        <li><a class="dropdown-item {% if app.request.attributes.get('_route') == 'app_tarif' %}active{% endif %}" href="{{ path('app_tarif') }}">Tarifs</a></li>
+                        <li><a class="dropdown-item" href="{{ path('app_partenaires') }}">Partenaires</a></li>
+                        <li><a class="dropdown-item" href="{{ path('app_reglement') }}">Réglement intérieur</a></li>
+                        <li><a class="nav-link fw-bold text-white {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}"
+                       href="{{ path('app_contact') }}">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold text-white {% if app.request.attributes.get('_route') in ['app_horaire','app_tarif'] %}active{% endif %}"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        informations pratiques
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                        <li><a class="dropdown-item" href="{{ path('app_video') }}">Vidéo les postures</a></li>
+                        <li><a class="dropdown-item" href="{{ path('app_videomateriel') }}">Vidéo mon ARC, mes fléches,<br> mes réglages</a></li>
+                      
+                    </ul>
+                </li>
+                
+            
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold text-white {% if app.request.attributes.get('_route') in ['app_horaire','app_tarif'] %}active{% endif %}"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Les Arcs & types de tirs 
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="nav-link fw-bold text-white {% if app.request.attributes.get('_route') == 'app_type_arcs' %}active{% endif %}"
+                                href="{{ path('app_type_arcs') }}">Types d'Arcs</a></li>
+                        <li><a class="nav-link fw-bold text-white {% if app.request.attributes.get('_route') == 'app_disciplines' %}active{% endif %}"
+                                 href="{{ path('app_disciplines') }}">Types-de-tirs</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    
+                </li>
+            </ul>
+      
+        </div>
+    </div>
+</nav>
+
+<!-- Contenu principal -->
+<main class="container my-5">
+    {% block body %}{% endblock %}
+</main>
+
+<!-- Footer stylé -->
+<footer class="text-white py-1 mt-auto" style="background-color:#0F9DE8;">
+    <div class="container text-center" >
+        <p>&copy; {{ "now"|date("Y") }} Les Archers du Castel. Tous droits réservés.</p>
+        <p class="mb-1">Site développé par <strong>Lionel Lebreton</strong></p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

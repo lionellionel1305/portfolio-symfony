@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Types d'Arcs - Les Archers du Castel{% endblock %}
+
+{% block body %}
+<div class="text-center"><br>
+    <div class="text-center my-1">
+           <h1 style="color:#0000ff; font-weight:bold; font-size:4.5rem;">
+    Les types d'arc</h1>
+    </h1><br><br>
+       </div>    
+    <div class="container my-4">
+        <table class="table table-bordered table-hover align-middle text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Image</th>
+                    <th>Type d'Arc</th>
+                    <th>Description</th>
+                    <th>Caractéristiques Techniques</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                    <td><img src="{{ asset('images/arc-trad.jpg') }}" alt="Arc traditionnel" class="img-fluid" style="max-height:150px;"></td>
+                    <td>Arc traditionnel</td>
+                    <td>Arc sans viseur, souvent inspiré de modèles historiques comme les arcs mongols ou turcs. Favorise le tir instinctif et la connexion directe avec la technique ancienne.</td>
+                    <td>
+                        Longueur : 1,20 – 1,80 m<br>
+                        Puissance : 20 – 50 lbs<br>
+                        Usage : Tir instinctif, reconstitution<br>
+                        Particularités : Pas de viseur, conception historique, flèches traditionnelles
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ asset('images/arc-droit.jpg') }}" alt="Arc droit" class="img-fluid" style="max-height:150px;"></td>
+                    <td>Arc droit (Flatbow)</td>
+                    <td>Arc intermédiaire entre le longbow et le recurve, avec des branches larges et plates. Apprécié pour sa stabilité et sa polyvalence en tir nature.</td>
+                    <td>
+                        Longueur : 1,60 – 1,90 m<br>
+                        Puissance : 25 – 55 lbs<br>
+                        Usage : Tir nature, loisir<br>
+                        Particularités : Branches plates, tir stable, facile à apprendre
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td><img src="{{ asset('images/arc-long.jpg') }}" alt="Arc long" class="img-fluid" style="max-height:150px;"></td>
+                    <td>Arc long (Longbow)</td>
+                    <td>Arc traditionnel anglais, simple et élégant. Offre une expérience de tir authentique et historique, parfait pour le tir en nature ou les reconstitutions médiévales.</td>
+                    <td>
+                        Longueur : 1,80 – 2,10 m<br>
+                        Puissance : 30 – 50 lbs<br>
+                        Usage : Tir historique, loisirs<br>
+                        Particularités : Conception simple, bois massif, flèches en bois
+                    </td>
+                </tr>
+                 <tr>
+                    <td><img src="{{ asset('images/arc-classique.jpg') }}" alt="Arc classique" class="img-fluid" style="max-height:200;"></td>
+                    <td>Arc classique (Recurve)</td>
+                    <td>Arc utilisé en compétition olympique et en tir sportif, reconnu pour sa précision et son équilibre. Ses branches recourbées vers l’extérieur permettent un tir puissant et fluide.</td>
+                    <td>
+                        Longueur : 1,66 – 1,88 m<br>
+                        Puissance : 18 – 50 lbs<br>
+                        Usage : Compétition, tir cible<br>
+                        Particularités : Stabilisateur, viseur, flèches en carbone ou aluminium
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{ asset('images/arc-a-poulie.jpg') }}" alt="Arc à poulies" class="img-fluid" style="max-height:150px;"></td>
+                    <td>Arc à poulies (Compound)</td>
+                    <td>Arc moderne doté de poulies et de cames qui réduisent l’effort de maintien de la corde. Très précis, idéal pour le tir sur longue distance ou le tir 3D.</td>
+                    <td>
+                        Longueur : 0,90 – 1,05 m<br>
+                        Puissance : 20 – 70 lbs<br>
+                        Usage : Compétition 3D, chasse<br>
+                        Particularités : Système de poulies, câbles et cames, visée mécanique
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <div class="container my-5">
+    <h2 class="text-center mb-4" style="color:#0000ff; font-weight:bold; font-size:3rem;">
+        Les Flèches – Spine et Puissance Recommandés
+    </h2>
+    <table class="table table-bordered table-hover align-middle text-center">
+        <thead style="background-color:#0000FF; color:white; font-weight:bold; font-size:1.25rem;">
+            <tr>
+                <th>Type de flèche</th>
+                <th>Allonge de l’archer</th>
+                <th>Puissance de l’arc (lbs)</th>
+                <th>Spine recommandé</th>
+                <th>Longueur</th>
+                <th>Poids (grain / g)</th>
+                <th>Pointes</th>
+                <th>Plumes / Vanes</th>
+                <th>Utilisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carbone Target</td>
+                <td>26–28"</td>
+                <td>18–30 lbs (Recurve)</td>
+                <td>500–600</td>
+                <td>28 pouces</td>
+                <td>100 gr / 6,5 g</td>
+                <td>Blunt / Field</td>
+                <td>Vaned plastique 3", droite</td>
+                <td>Compétition, tir cible</td>
+            </tr>
+            <tr>
+                <td>Carbone Target</td>
+                <td>28–30"</td>
+                <td>30–40 lbs (Recurve)</td>
+                <td>400–500</td>
+                <td>30 pouces</td>
+                <td>110 gr / 7 g</td>
+                <td>Field / Target</td>
+                <td>Vaned plastique 3", droite</td>
+                <td>Compétition</td>
+            </tr>
+            <tr>
+                <td>Aluminium Precision</td>
+                <td>28–32"</td>
+                <td>25–50 lbs (Flatbow / Longbow)</td>
+                <td>400–600</td>
+                <td>32 pouces</td>
+                <td>120 gr / 7,8 g</td>
+                <td>Blunt / Field</td>
+                <td>Plume naturelle 4", hélicoïdale</td>
+                <td>Loisir, tir nature</td>
+            </tr>
+            <tr>
+                <td>Bois Traditionnel</td>
+                <td>28–32"</td>
+                <td>25–50 lbs (Arc traditionnel)</td>
+                <td>340–500</td>
+                <td>28–32 pouces</td>
+                <td>140 gr / 9 g</td>
+                <td>Field / Chasse légère</td>
+                <td>Plume naturelle 4", droite</td>
+                <td>Tir instinctif, reconstitution historique</td>
+            </tr>
+            <tr>
+                <td>Carbone Compound</td>
+                <td>27–30"</td>
+                <td>20–70 lbs (Compound)</td>
+                <td>300–400</td>
+                <td>27–30 pouces</td>
+                <td>90 gr / 5,8 g</td>
+                <td>Target / Broadhead</td>
+                <td>Vaned plastique 2.5", hélicoïdale</td>
+                <td>Compétition 3D, chasse</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+
